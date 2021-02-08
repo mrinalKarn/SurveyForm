@@ -1,0 +1,125 @@
+<!doctype html>
+
+<head>
+    <html lang="en">
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="survey-form">
+            <div class="header">
+                <h1>freeCodeCamp Survey Form</h1>
+                <p id="description">Thank you for taking the time to help us improve the platform</p>
+            </div>
+
+            <div class="form-container">
+                <form id="survey" class="form">
+
+                    <div class="form-field-default">
+                        <p for="name" style="padding-top: 5%;">Name:</p>
+                        <input type="text" class="input" name="name" id="name" autocomplete="off" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <p for="Email">Email:</p>
+                        <input type="email" name="email" class="input" id="email" autocomplete="off" placeholder="Enter your Email" required onkeyup="checkEmail()">
+                        <small></small>
+                    </div>
+
+                    <div class="form-field">
+                        <p for="password">Password:</p>
+                        <input type="password" name="password" class="input" id="password" autocomplete="off" placeholder="Enter your Password" required onkeyup="checkPassword()">
+                        <small></small>
+                    </div>
+
+                    <div class="form-field">
+                        <p for="username">Confirm Password:</p>
+                        <input type="password" name="confirm-password" class="input" id="confirm-password" autocomplete="off" placeholder="Confirm your Password" required onkeyup="checkConfirmPassword()">
+                        <small></small>
+                    </div>
+
+                    <div class="form-field-default">
+                        <p for="age">Age(optional)</p>
+                        <input type="number" name="age" id="age" class="input" autocomplete="off" min="10" max="99" placeholder="Age">
+                    </div>
+
+                    <div class="form-field-default">
+                        <p>Which option best describes your current role?</p>
+                        <select id="jobs" name="jobs" required class="input">
+              <option disabled selected value>Select current role</option>
+              <option value="Student">Student</option>
+              <option value="Full Time Job">Full Time Job</option>
+              <option value="Full Time Learner">Full Time Learner</option>
+              <option value="Prefer Not To Say">Prefer Not To Say</option>
+              <option value="Other">Other</option>
+            </select>
+                    </div>
+
+                    <div class="form-field-default">
+                        <p>Would you recommend freeCodeCamp to a friend?</p>
+                        <input type="radio" id="definitely" name="recommend" value="definitely" checked>
+                        <label for="male">Definitely</label><br>
+                        <input type="radio" id="maybe" name="recommend" value="maybe">
+                        <label for="female">Maybe</label><br>
+                        <input type="radio" id="not-sure" name="recommend" value="not-sure">
+                        <label for="other">Not Sure</label>
+                    </div>
+
+                    <div class="form-field-default">
+                        <p>What is your favorite feature of freeCodeCamp?</p>
+                        <select id="features" name="features" class="input" required>
+              <option value="Challenges">Challenges</option>
+              <option value="Projects">Projects</option>
+              <option value="Community">Community</option>
+              <option value="Open Source">Open Source</option>
+            </select>
+                    </div>
+
+                    <div class="form-field-default">
+                        <p>What would you like to see improved? (Check all that apply)</p>
+                        <input type="checkbox" id="frontend" name="frontend" value="frontend">
+                        <label for="vehicle1"> Front-end Projects</label><br>
+                        <input type="checkbox" id="backend" name="backend" value="backend">
+                        <label for="vehicle2"> Back-end Projects</label><br>
+                        <input type="checkbox" id="data" name="data" value="data">
+                        <label for="vehicle3"> Data Visualization</label><br>
+                        <input type="checkbox" id="challenge" name="challenge" value="challenge">
+                        <label for="vehicle1"> Challenges</label><br>
+                        <input type="checkbox" id="gitter" name="gitter" value="gitter">
+                        <label for="vehicle2"> Gitter help rooms</label><br>
+                        <input type="checkbox" id="video" name="video" value="video">
+                        <label for="vehicle3"> Videos</label><br>
+                        <input type="checkbox" id="wiki" name="wiki" value="wiki">
+                        <label for="vehicle3"> Wiki</label><br>
+                        <input type="checkbox" id="forum" name="forum" value="forum">
+                        <label for="vehicle3"> Forum</label><br>
+                        <input type="checkbox" id="additional" name="additional" value="additional">
+                        <label for="vehicle3"> Additional Courses</label><br>
+                    </div>
+
+                    <div class="form-field-default">
+                        <p>Any comments or suggestions?</p>
+                        <textarea placeholder="Enter your comment here..." id="comments" class="input"></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <input type="submit" onclick="Submit(event)" class="input" value="Submit" style="margin-top: 5%;">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
